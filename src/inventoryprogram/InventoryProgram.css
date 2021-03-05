@@ -1,0 +1,26 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.title {
+    -fx-font-weight:bold;
+    -fx-font-size:18;
+    -fx-font-family:sansserif;
+}
+
+.rowLabel {
+    -fx-font-weight:bold;
+    -fx-font-size:12;
+    -fx-font-family:sansserif;
+}
+
+.textBoxInput {
+    -fx-font-style:italic;
+    -fx-font-family:serif;
+    -fx-font-size:12;
+    
+}

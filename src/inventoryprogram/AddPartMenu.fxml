@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@InventoryProgram.css" />
+    </stylesheets>
+   <children>
+      <BorderPane prefHeight="463.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <top>
+            <HBox prefHeight="34.0" prefWidth="560.0" spacing="40.0" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="124.0" styleClass="title" stylesheets="@InventoryProgram.css" text="Add Part" />
+                  <RadioButton id="radionInHouse" fx:id="radioInHouse" mnemonicParsing="false" onAction="#handleRadioInHouse" prefHeight="21.0" prefWidth="120.0" styleClass="rowLabel" stylesheets="@InventoryProgram.css" text="In-House">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton id="radioOutsourced" fx:id="radioOutsourced" mnemonicParsing="false" onAction="#handleRadioOutsourced" styleClass="rowLabel" stylesheets="@InventoryProgram.css" text="Outsourced" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="560.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="buttonSave" fx:id="buttonSave" minWidth="70.0" mnemonicParsing="false" onAction="#handleSave" text="Save" />
+                  <Button id="buttonCancel" fx:id="buttonCancel" minWidth="70.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label minWidth="120.0" prefHeight="15.0" prefWidth="120.0" styleClass="rowLabel" stylesheets="@InventoryProgram.css" text="ID" />
+                        <TextField disable="true" promptText="Auto Gen - Disabled" text="Auto Gen - Disabled">
+                           <font>
+                              <Font name="Times New Roman Italic" size="12.0" />
+                           </font></TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label minWidth="120.0" prefHeight="15.0" prefWidth="120.0" styleClass="rowLabel" stylesheets="@InventoryProgram.css" text="Name" />
+                        <TextField id="textBoxPartName" fx:id="textName" promptText="Part Name" styleClass="textBoxInput" stylesheets="@InventoryProgram.css">
+                           <font>
+                              <Font name="Times New Roman Italic" size="12.0" />
+                           </font></TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label minWidth="120.0" prefHeight="15.0" prefWidth="120.0" styleClass="rowLabel" stylesheets="@InventoryProgram.css" text="Inv" />
+                        <TextField id="textBoxInv" fx:id="textStock" promptText="Inv" styleClass="textBoxInput" stylesheets="@InventoryProgram.css">
+                           <font>
+                              <Font name="Times New Roman Italic" size="12.0" />
+                           </font></TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label minWidth="120.0" prefHeight="15.0" prefWidth="120.0" styleClass="rowLabel" stylesheets="@InventoryProgram.css" text="Price/Cost" />
+                        <TextField id="textBoxPrice" fx:id="textPrice" promptText="Price/Cost" styleClass="textBoxInput" stylesheets="@InventoryProgram.css">
+                           <font>
+                              <Font name="Times New Roman Italic" size="12.0" />
+                           </font></TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label minWidth="120.0" prefHeight="15.0" prefWidth="120.0" styleClass="rowLabel" stylesheets="@InventoryProgram.css" text="Max" />
+                        <TextField id="textBoxMax" fx:id="textMax" promptText="Max" styleClass="textBoxInput" stylesheets="@InventoryProgram.css">
+                           <font>
+                              <Font name="Times New Roman Italic" size="12.0" />
+                           </font></TextField>
+                        <Label prefHeight="15.0" prefWidth="122.0" styleClass="rowLabel" stylesheets="@InventoryProgram.css" text="Min" />
+                        <TextField id="textBoxMin" fx:id="textMin" promptText="Min" styleClass="textBoxInput" stylesheets="@InventoryProgram.css">
+                           <font>
+                              <Font name="Times New Roman Italic" size="12.0" />
+                           </font></TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="labelCompanyMachine" minWidth="120.0" prefHeight="15.0" prefWidth="120.0" styleClass="rowLabel" stylesheets="@InventoryProgram.css" text="Machine ID" />
+                        <TextField id="textBoxCompanyName" fx:id="textCompanyMachine" promptText="Mach ID" styleClass="textBoxInput" stylesheets="@InventoryProgram.css">
+                           <font>
+                              <Font name="Times New Roman Italic" size="12.0" />
+                           </font></TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <left>
+            <VBox prefHeight="30.0" prefWidth="30.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <VBox prefHeight="30.0" prefWidth="30.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
